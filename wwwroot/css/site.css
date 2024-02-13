@@ -38,6 +38,14 @@ html {
     margin-bottom: 20px;
 }
 
+.card-link {
+    text-decoration: none; /* Remove underline */
+}
+
+    .card-link:active .candidate-card {
+        background-color: #ccc; /* Change background color */
+        transition: background-color 0.3s; /* Add transition effect */
+    }
 
 
     .slogan img {
