@@ -1,0 +1,60 @@
+﻿/* styles.css */
+.candidate-banner {
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.candidate-image {
+    flex: 1;
+    padding-right: 20px;
+}
+
+    .candidate-image img {
+        width: 100%;
+        max-width: 100%;
+        border-radius: 5px;
+    }
+
+.candidate-details {
+    flex: 1;
+    padding-left: 20px;
+}
+
+    .candidate-details h1 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .candidate-details p {
+        font-size: 16px;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+
+.party-logo {
+    max-width: 100px;
+    border-radius: 5px;
+}
+
+/* Media query for mobile */
+@media screen and (max-width: 600px) {
+    .candidate-banner {
+        flex-direction: column;
+    }
+
+    .candidate-image,
+    .candidate-details {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .candidate-image {
+        margin-bottom: 20px;
+    }
+}

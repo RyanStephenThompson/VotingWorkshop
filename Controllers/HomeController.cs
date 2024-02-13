@@ -23,6 +23,11 @@ namespace VotingWorkshop.Controllers
             return View();
         }
 
+        public IActionResult Candidates()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
