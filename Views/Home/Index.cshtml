@@ -2,7 +2,125 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting Website</title>
+</head>
+
+
+
+<body>
+
+    <div class="image-banner"></div>
+
+    <div class="slogan">
+        <h1> Let your voice be heard!</h1>
+        <img src="~/images/arrow.png" alt="arrow 1" />
+    </div>
+
+    <div class="container">
+
+        <div class="candidates-grid">
+            <div class="candidate-card">
+                <div class="candidate">
+                    <img src="~/images/candidate1.png" alt="Candidate 1">
+                    <h2>Candidate 1</h2>
+                    <p>Description of Candidate 1.</p>
+                </div>
+            </div>
+
+            <div class="candidate-card">
+                <div class="candidate">
+                    <img src="~/images/candidate2.png" alt="Candidate 2">
+                    <h2>Candidate 2</h2>
+                    <p>Description of Candidate 2.</p>
+                </div>
+            </div>
+
+            <div class="candidate-card">
+                <div class="candidate">
+                    <img src="~/images/candidate3.png" alt="Candidate 3">
+                    <h2>Candidate 3</h2>
+                    <p>Description of Candidate 3.</p>
+                </div>
+            </div>
+
+            <div class="candidate-card">
+                <div class="candidate">
+                    <img src="~/images/candidate4.png" alt="Candidate 4">
+                    <h2>Candidate 4</h2>
+                    <p>Description of Candidate 4.</p>
+                </div>
+            </div>
+
+            <div class="candidate-card">
+                <div class="candidate">
+                    <img src="~/images/candidate5.png" alt="Candidate 5">
+                    <h2>Candidate 5</h2>
+                    <p>Description of Candidate 5.</p>
+                </div>
+            </div>
+
+            <div class="candidate-card">
+                <div class="candidate">
+                    <img src="~/images/candidate6.png" alt="Candidate 6">
+                    <h2>Candidate 6</h2>
+                    <p>Description of Candidate 6.</p>
+                </div>
+            </div>
+
+            <!-- Repeat the above div structure for each candidate -->
+        </div>
+    </div>
+
+    <div class="graph">
+        <div class="container">
+            <h2>Results</h2>
+            <div class="graph-bars">
+                <div class="graph-bar-name">Candidate 1 (30%)</div>
+                <div class="graph-bar" style="width: 30%;"></div>
+                <div class="graph-bar-name">Candidate 2 (20%)</div>
+                <div class="graph-bar" style="width: 20%;"></div>
+                <div class="graph-bar-name">Candidate 3 (15%)</div>
+                <div class="graph-bar" style="width: 15%;"></div>
+                <div class="graph-bar-name">Candidate 4 (10%)</div>
+                <div class="graph-bar" style="width: 10%;"></div>
+                <div class="graph-bar-name">Candidate 5 (5%)</div>
+                <div class="graph-bar" style="width: 5%;"></div>
+                <div class="graph-bar-name">Candidate 6 (20%)</div>
+                <div class="graph-bar" style="width: 20%;"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        // Calculate total votes for all candidates
+        const totalVotes = 100; // Assuming total votes is 100 for this example
+
+        // Array to store candidates and their votes
+        const candidates = [
+            { name: "Candidate 1", votes: 30 },
+            { name: "Candidate 2", votes: 20 },
+            { name: "Candidate 3", votes: 15 },
+            { name: "Candidate 4", votes: 10 },
+            { name: "Candidate 5", votes: 5 },
+            { name: "Candidate 6", votes: 20 }
+        ];
+
+        // Calculate percentage for each candidate and update HTML
+        candidates.forEach(candidate => {
+            const percentage = (candidate.votes / totalVotes) * 100;
+            const graphBarName = document.querySelector(`.graph-bar-name:contains("${candidate.name}")`);
+            if (graphBarName) {
+                graphBarName.textContent = `${candidate.name} (${percentage.toFixed(2)}%)`;
+            }
+        });
+    </script>
+
+
+
+</body>
+

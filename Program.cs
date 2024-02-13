@@ -17,10 +17,19 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.Requ
 builder.Services.AddControllersWithViews();
 
 // Initialize Firebase
-FirebaseApp.Create(new AppOptions
+try
 {
-    Credential = GoogleCredential.FromFile("voting - workshop - fc2cc - firebase - adminsdk - q7o57 - 87b90ffd00.json.json")
-});
+    FirebaseApp.Create(new AppOptions
+    {
+        Credential = GoogleCredential.FromFile("voting - workshop - fc2cc - firebase - adminsdk - q7o57 - 87b90ffd00.json")
+    });
+}
+catch
+{
+    Console.WriteLine("Error creating firebase");
+}
+
+
 
 var app = builder.Build();
 

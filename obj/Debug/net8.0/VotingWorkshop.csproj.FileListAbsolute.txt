@@ -144,3 +144,14 @@ D:\Desktop\uni\VotingWorkshop\VotingWorkshop\obj\Debug\net8.0\refint\VotingWorks
 D:\Desktop\uni\VotingWorkshop\VotingWorkshop\obj\Debug\net8.0\VotingWorkshop.pdb
 D:\Desktop\uni\VotingWorkshop\VotingWorkshop\obj\Debug\net8.0\VotingWorkshop.genruntimeconfig.cache
 D:\Desktop\uni\VotingWorkshop\VotingWorkshop\obj\Debug\net8.0\ref\VotingWorkshop.dll
+D:\Desktop\uni\VotingWorkshop\VotingWorkshop\bin\Debug\net8.0\voting-workshop-fc2cc-firebase-adminsdk-q7o57-87b90ffd00.json
+D:\Desktop\uni\VotingWorkshop\VotingWorkshop\bin\Debug\net8.0\FirebaseAdmin.dll
+D:\Desktop\uni\VotingWorkshop\VotingWorkshop\bin\Debug\net8.0\Firebase.Auth.dll
+D:\Desktop\uni\VotingWorkshop\VotingWorkshop\bin\Debug\net8.0\Google.Api.Gax.dll
+D:\Desktop\uni\VotingWorkshop\VotingWorkshop\bin\Debug\net8.0\Google.Api.Gax.Rest.dll
+D:\Desktop\uni\VotingWorkshop\VotingWorkshop\bin\Debug\net8.0\Google.Apis.dll
+D:\Desktop\uni\VotingWorkshop\VotingWorkshop\bin\Debug\net8.0\Google.Apis.Auth.PlatformServices.dll
+D:\Desktop\uni\VotingWorkshop\VotingWorkshop\bin\Debug\net8.0\Google.Apis.Auth.dll
+D:\Desktop\uni\VotingWorkshop\VotingWorkshop\bin\Debug\net8.0\Google.Apis.Core.dll
+D:\Desktop\uni\VotingWorkshop\VotingWorkshop\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\Desktop\uni\VotingWorkshop\VotingWorkshop\obj\Debug\net8.0\VotingWorkshop.sourcelink.json

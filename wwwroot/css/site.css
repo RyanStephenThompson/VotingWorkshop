@@ -1,22 +1,167 @@
 html {
-  font-size: 14px;
+    font-size: 14px;
+    position: relative;
+    min-height: 100%;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
+
+
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
-html {
-  position: relative;
-  min-height: 100%;
+
+.image-banner {
+    background-image: url('../images/background.jpg'); /* Replace 'background.jpg' with the path to your background image */
+    background-position: center;
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+    width: 100vw;
+}
+
+.slogan {
+    width: 100vw;
+    height: 20vh;
+    padding: 35px;
+    text-align: center;
+    background-color: rgba(229, 228, 226, 0.7);
+    margin-bottom: 20px;
+}
+
+
+
+    .slogan img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-bottom: 10px;
+    }
+
+@media only screen and (max-width: 768px) {
+    .slogan img {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+.footer {
+    background-color: white; /* Change to your desired color */
+    color: #fff;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    width: 100vw;
+    margin: 0;
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 75px;
+}
+
+.container {
+    width: 90%;
+    background-color: rgba(255, 255, 255, 1); /* Add opacity to make content more readable */
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.candidates-grid {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Define 3 columns */
+    grid-template-rows: auto auto; /* Split into two rows */
+    gap: 20px;
+    justify-items: center;
+}
+
+@media only screen and (max-width: 768px) {
+    .candidates-grid {
+        grid-template-columns: repeat(2, 1fr); /* Define 3 columns */
+    }
+}
+
+
+.candidate-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    padding: 1vw;
+}
+
+
+.candidate {
+    text-align: center;
+}
+
+    .candidate img {
+        width: 5vw;
+        height: 5vw;
+        border-radius: 50%;
+        margin-bottom: 10px;
+    }
+
+@media only screen and (max-width: 768px) {
+    .candidate img {
+        width: 15vw;
+        height: 15vw;
+    }
+}
+
+.candidate h2 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.candidate p {
+    color: #666;
+}
+
+
+.graph {
+    margin-top: 40px;
+}
+
+.graph-bars {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 10px;
+}
+
+.graph-bar {
+    background-color: #007bff;
+    height: 1vw; /* Adjust the height as needed */
+    border-radius: 5px;
+}
+
+@media only screen and (max-width: 768px) {
+    .graph-bar {
+        height: 5vw; /* Adjust the height as needed */
+    }
+
+    .graph-bars {
+        grid-gap: 5px;
+    }
+}
+
+.graph-bar-name {
+    align-self: center;
 }

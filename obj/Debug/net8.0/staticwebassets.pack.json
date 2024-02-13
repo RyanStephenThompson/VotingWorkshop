@@ -13,6 +13,38 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\Desktop\\uni\\VotingWorkshop\\VotingWorkshop\\wwwroot\\images\\arrow.png",
+      "PackagePath": "staticwebassets\\images\\arrow.png"
+    },
+    {
+      "Id": "D:\\Desktop\\uni\\VotingWorkshop\\VotingWorkshop\\wwwroot\\images\\background.jpg",
+      "PackagePath": "staticwebassets\\images\\background.jpg"
+    },
+    {
+      "Id": "D:\\Desktop\\uni\\VotingWorkshop\\VotingWorkshop\\wwwroot\\images\\candidate1.png",
+      "PackagePath": "staticwebassets\\images\\candidate1.png"
+    },
+    {
+      "Id": "D:\\Desktop\\uni\\VotingWorkshop\\VotingWorkshop\\wwwroot\\images\\candidate2.png",
+      "PackagePath": "staticwebassets\\images\\candidate2.png"
+    },
+    {
+      "Id": "D:\\Desktop\\uni\\VotingWorkshop\\VotingWorkshop\\wwwroot\\images\\candidate3.png",
+      "PackagePath": "staticwebassets\\images\\candidate3.png"
+    },
+    {
+      "Id": "D:\\Desktop\\uni\\VotingWorkshop\\VotingWorkshop\\wwwroot\\images\\candidate4.png",
+      "PackagePath": "staticwebassets\\images\\candidate4.png"
+    },
+    {
+      "Id": "D:\\Desktop\\uni\\VotingWorkshop\\VotingWorkshop\\wwwroot\\images\\candidate5.png",
+      "PackagePath": "staticwebassets\\images\\candidate5.png"
+    },
+    {
+      "Id": "D:\\Desktop\\uni\\VotingWorkshop\\VotingWorkshop\\wwwroot\\images\\candidate6.png",
+      "PackagePath": "staticwebassets\\images\\candidate6.png"
+    },
+    {
       "Id": "D:\\Desktop\\uni\\VotingWorkshop\\VotingWorkshop\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
