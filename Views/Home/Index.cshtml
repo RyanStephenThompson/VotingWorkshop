@@ -9,8 +9,6 @@
     <title>Voting Website</title>
 </head>
 
-
-
 <body>
 
     <div class="image-banner"></div>
@@ -23,15 +21,18 @@
     <div class="container">
 
         <div class="candidates-grid">
-            <a class=card-link asp-area="" asp-controller="Home" asp-action="Candidates">
-            <div class="candidate-card" >
-                <div class="candidate">
+            <a asp-action="Details" asp-controller="Candidate" asp-route-id="MSibXnIGDuPL4hh6OkfY">
+                <a class=card-link asp-area="" asp-controller="Home" asp-action="Candidates">
+                    <div class="candidate-card" >
+                        <div class="candidate">
                     
-                    <img src="~/images/candidate1.png" alt="Candidate 1">
-                    <h2>Candidate 1</h2>
-                    <p>Description of Candidate 1.</p>
-                </div>
-            </div>
+                            <img src="~/images/candidate1.png" alt="Candidate 1">
+                            <h2>Candidate 1</h2>
+                            <p>Description of Candidate 1.</p>
+
+                        </div>
+                    </div>
+                </a>
             </a>
 
             <a class=card-link asp-area="" asp-controller="Home" asp-action="Candidates">

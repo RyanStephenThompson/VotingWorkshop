@@ -3,6 +3,10 @@ using Microsoft.EntityFrameworkCore;
 using VotingWorkshop.Data;
 using FirebaseAdmin;
 using Google.Apis.Auth.OAuth2;
+using Microsoft.Extensions.Logging;
+using VotingWorkshop;
+using Google.Cloud.Firestore;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,19 +19,6 @@ builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddControllersWithViews();
-
-// Initialize Firebase
-try
-{
-    FirebaseApp.Create(new AppOptions
-    {
-        Credential = GoogleCredential.FromFile("voting - workshop - fc2cc - firebase - adminsdk - q7o57 - 87b90ffd00.json")
-    });
-}
-catch
-{
-    Console.WriteLine("Error creating firebase");
-}
 
 
 
@@ -58,3 +49,6 @@ app.MapControllerRoute(
 app.MapRazorPages();
 
 app.Run();
+
+
+
