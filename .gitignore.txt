@@ -1,2 +1,0 @@
-.vs/
-initFirebase.js
