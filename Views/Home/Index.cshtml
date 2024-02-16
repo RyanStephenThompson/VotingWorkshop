@@ -11,6 +11,7 @@
 
 <body>
 
+    <!-- <script type="module" src="~/js/initFirebase.js"></script> -->
     <div class="image-banner"></div>
 
     <div class="slogan">
@@ -21,66 +22,82 @@
     <div class="container">
 
         <div class="candidates-grid">
-            <a asp-action="Details" asp-controller="Candidate" asp-route-id="y88LHmZbYFXk8RcalYBf">
-                <a class=card-link asp-area="" asp-controller="Home" asp-action="Candidates">
-                    <div class="candidate-card" >
-                        <div class="candidate">
-                    
-                            <img src="~/images/candidate1.png" alt="Candidate 1">
-                            <h2>Candidate 1</h2>
-                            <p>Description of Candidate 1.</p>
 
+            <a class="card-link" asp-area="" asp-controller="Home" asp-action="Candidates" asp-route-id="y88LHmZbYFXk8RcalYBf">
+                <div class="candidate-card" onclick="showSpinner(this)">
+                    <div class="candidate">
+                        <img src="~/images/candidate1.png" alt="Candidate 1">
+                        <h2>John Doe</h2>
+                        <p>Description of Candidate 3.</p>
+                        <div class="card-spinner">
+                            <div class="spinner"></div>
                         </div>
                     </div>
-                </a>
+                </div>
             </a>
 
-            <a class=card-link asp-area="" asp-controller="Home" asp-action="Candidates">
-            <div class="candidate-card">
+            <a class=card-link asp-area="" asp-controller="Home" asp-action="Candidates" asp-route-id="Z9rsAAlBJ5tMAhPD5092">
+                <div class="candidate-card" onclick="showSpinner(this)">
                 <div class="candidate">
                     <img src="~/images/candidate2.png" alt="Candidate 2">
                     <h2>Candidate 2</h2>
                     <p>Description of Candidate 2.</p>
+                        <div class="card-spinner">
+                            <div class="spinner"></div>
+                        </div>
                 </div>
             </div>
             </a>
 
             <a class=card-link asp-area="" asp-controller="Home" asp-action="Candidates">
-            <div class="candidate-card">
+                <div class="candidate-card" onclick="showSpinner(this)">
                 <div class="candidate">
                     <img src="~/images/candidate3.png" alt="Candidate 3">
                     <h2>Candidate 3</h2>
-                    <p>Description of Candidate 3.</p>
+                        <p>Description of Candidate 3.</p>
+                        <div class="card-spinner">
+                            <div class="spinner"></div>
+                        </div>
+                    
                 </div>
             </div>
             </a>
 
-            <a class=card-link asp-area="" asp-controller="Home" asp-action="Candidates">
-            <div class="candidate-card">
+            <a class=card-link asp-area="" asp-controller="Home" asp-action="Candidates" asp-route-id="">
+                <div class="candidate-card" onclick="showSpinner(this)">
                 <div class="candidate">
                     <img src="~/images/candidate4.png" alt="Candidate 4">
                     <h2>Candidate 4</h2>
                     <p>Description of Candidate 4.</p>
+                        <div class="card-spinner">
+                            <div class="spinner"></div>
+                        </div>
                 </div>
             </div>
             </a>
 
             <a class=card-link asp-area="" asp-controller="Home" asp-action="Candidates">
-            <div class="candidate-card">
+                <div class="candidate-card" onclick="showSpinner(this)">
                 <div class="candidate">
                     <img src="~/images/candidate5.png" alt="Candidate 5">
                     <h2>Candidate 5</h2>
                     <p>Description of Candidate 5.</p>
+                        <div class="card-spinner">
+                            <div class="spinner"></div>
+                        </div>
                 </div>
             </div>
             </a>
 
             <a class=card-link asp-area="" asp-controller="Home" asp-action="Candidates">
-            <div class="candidate-card">
+                <div class="candidate-card" onclick="showSpinner(this)">
                 <div class="candidate">
                     <img src="~/images/candidate6.png" alt="Candidate 6">
                     <h2>Candidate 6</h2>
                     <p>Description of Candidate 6.</p>
+                        <div class="card-spinner">
+                            <div class="spinner"></div>
+                        </div>
                 </div>
             </div>
             </a>
@@ -133,7 +150,15 @@
         });
     </script>
 
+    <script>
+        function showSpinner(card) {
+            var spinnerOverlay = card.querySelector('.card-spinner');
+            spinnerOverlay.style.display = 'block';
 
+            // Optionally, you can also redirect to the Candidates page after showing the spinner
+            // window.location.href = card.getAttribute('href');
+        }
+    </script>
 
 </body>
 

@@ -1,32 +1,59 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Google.Cloud.Firestore;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using VotingWorkshop.Services;
+using VotingWorkshop.Data;
+using VotingWorkshop.Models;
+using System.IO;
 
 namespace VotingWorkshop.Controllers
 {
     public class CandidateController : Controller
 
-    {
-        private readonly CandidateService _candidateService;
+    { 
 
-        
+        FirestoreDB db;
+    
 
-        public CandidateController(CandidateService candidateService)
+
+
+        public CandidateController()
         {
-            Console.WriteLine("candid");
-            _candidateService = candidateService;
+            db = new FirestoreDB("candidates");           
         }
 
-        // Get the details of the candidate 
-        public async Task<IActionResult> Details(string id)
+
+        public void AddCandidate(Candidate candidate)
         {
-            Console.WriteLine("details");
-            string longDescription = await _candidateService.GetCandidateLongDescriptionAsync(id);
-            
-            ViewBag.LongDescription = longDescription;
-            Console.WriteLine(longDescription);
-            return View();
+            try
+            {
+                 db.AddToDB(candidate);
+            }
+            catch (Exception ex){ Console.WriteLine(ex); }
         }
 
+        public async Task<Candidate> getCandidate(String ID)
+        {
+            try
+            {
+                DocumentSnapshot documentSnapshot = await db.readDocument(ID);
+
+
+                if (documentSnapshot == null) 
+                { 
+                    return   null; 
+                }
+                else
+                {
+                    
+                    Candidate candidate =  documentSnapshot.ConvertTo<Candidate>();
+
+
+
+                    return candidate;
+                }
+            }
+            catch (Exception ex) { Console.WriteLine(ex); return null; }
+        }
     }
 }

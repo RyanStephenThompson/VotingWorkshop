@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using VotingWorkshop.Models;
 
@@ -7,6 +7,7 @@ namespace VotingWorkshop.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        Candidate candidate;
 
         public HomeController(ILogger<HomeController> logger)
         {
@@ -23,9 +24,23 @@ namespace VotingWorkshop.Controllers
             return View();
         }
 
-        public IActionResult Candidates()
+        public async void setCandidate(String DocID)
         {
-            return View();
+
+            CandidateController candidateController = new CandidateController();
+            candidate = await candidateController.getCandidate(DocID);
+
+        }
+        public IActionResult Candidates(String id)
+        {
+            setCandidate(id);
+
+            //force page to wait until data has been fetched
+            while (candidate == null) {
+                continue;               
+            }
+
+            return View(candidate);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
@@ -33,5 +48,7 @@ namespace VotingWorkshop.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+ 
     }
 }
