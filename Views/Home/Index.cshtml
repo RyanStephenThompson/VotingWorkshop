@@ -10,8 +10,7 @@
 </head>
 
 <body>
-
-    <!-- <script type="module" src="~/js/initFirebase.js"></script> -->
+    
     <div class="image-banner"></div>
 
     <div class="slogan">
@@ -28,7 +27,7 @@
                     <div class="candidate">
                         <img src="~/images/candidate1.png" alt="Candidate 1">
                         <h2>John Doe</h2>
-                        <p>Description of Candidate 3.</p>
+                        <img src="~/images/blueParty.jpg" alt="Candidate 1 party">
                         <div class="card-spinner">
                             <div class="spinner"></div>
                         </div>
@@ -41,7 +40,7 @@
                 <div class="candidate">
                     <img src="~/images/candidate2.png" alt="Candidate 2">
                     <h2>Candidate 2</h2>
-                    <p>Description of Candidate 2.</p>
+                        <img src="~/images/redParty.jpg" alt="Candidate 2 party">
                         <div class="card-spinner">
                             <div class="spinner"></div>
                         </div>
@@ -49,55 +48,16 @@
             </div>
             </a>
 
-            <a class=card-link asp-area="" asp-controller="Home" asp-action="Candidates">
+            <a class=card-link asp-area="" asp-controller="Home" asp-action="Candidates" asp-route-id="Z9rsAAlBJ5tMAhPD5092">
                 <div class="candidate-card" onclick="showSpinner(this)">
                 <div class="candidate">
                     <img src="~/images/candidate3.png" alt="Candidate 3">
                     <h2>Candidate 3</h2>
-                        <p>Description of Candidate 3.</p>
+                        <img src="~/images/greenParty.jpg" alt="Candidate 3 party">
                         <div class="card-spinner">
                             <div class="spinner"></div>
                         </div>
                     
-                </div>
-            </div>
-            </a>
-
-            <a class=card-link asp-area="" asp-controller="Home" asp-action="Candidates" asp-route-id="">
-                <div class="candidate-card" onclick="showSpinner(this)">
-                <div class="candidate">
-                    <img src="~/images/candidate4.png" alt="Candidate 4">
-                    <h2>Candidate 4</h2>
-                    <p>Description of Candidate 4.</p>
-                        <div class="card-spinner">
-                            <div class="spinner"></div>
-                        </div>
-                </div>
-            </div>
-            </a>
-
-            <a class=card-link asp-area="" asp-controller="Home" asp-action="Candidates">
-                <div class="candidate-card" onclick="showSpinner(this)">
-                <div class="candidate">
-                    <img src="~/images/candidate5.png" alt="Candidate 5">
-                    <h2>Candidate 5</h2>
-                    <p>Description of Candidate 5.</p>
-                        <div class="card-spinner">
-                            <div class="spinner"></div>
-                        </div>
-                </div>
-            </div>
-            </a>
-
-            <a class=card-link asp-area="" asp-controller="Home" asp-action="Candidates">
-                <div class="candidate-card" onclick="showSpinner(this)">
-                <div class="candidate">
-                    <img src="~/images/candidate6.png" alt="Candidate 6">
-                    <h2>Candidate 6</h2>
-                    <p>Description of Candidate 6.</p>
-                        <div class="card-spinner">
-                            <div class="spinner"></div>
-                        </div>
                 </div>
             </div>
             </a>
@@ -115,12 +75,6 @@
                 <div class="graph-bar" style="width: 20%;"></div>
                 <div class="graph-bar-name">Candidate 3 (15%)</div>
                 <div class="graph-bar" style="width: 15%;"></div>
-                <div class="graph-bar-name">Candidate 4 (10%)</div>
-                <div class="graph-bar" style="width: 10%;"></div>
-                <div class="graph-bar-name">Candidate 5 (5%)</div>
-                <div class="graph-bar" style="width: 5%;"></div>
-                <div class="graph-bar-name">Candidate 6 (20%)</div>
-                <div class="graph-bar" style="width: 20%;"></div>
             </div>
         </div>
     </div>
@@ -134,10 +88,7 @@
         const candidates = [
             { name: "Candidate 1", votes: 30 },
             { name: "Candidate 2", votes: 20 },
-            { name: "Candidate 3", votes: 15 },
-            { name: "Candidate 4", votes: 10 },
-            { name: "Candidate 5", votes: 5 },
-            { name: "Candidate 6", votes: 20 }
+            { name: "Candidate 3", votes: 15 }
         ];
 
         // Calculate percentage for each candidate and update HTML

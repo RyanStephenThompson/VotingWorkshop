@@ -41,24 +41,12 @@
       "PackagePath": "staticwebassets\\images\\candidate3.png"
     },
     {
-      "Id": "D:\\Desktop\\uni\\VotingWorkshop\\VotingWorkshop\\wwwroot\\images\\candidate4.png",
-      "PackagePath": "staticwebassets\\images\\candidate4.png"
-    },
-    {
-      "Id": "D:\\Desktop\\uni\\VotingWorkshop\\VotingWorkshop\\wwwroot\\images\\candidate5.png",
-      "PackagePath": "staticwebassets\\images\\candidate5.png"
-    },
-    {
-      "Id": "D:\\Desktop\\uni\\VotingWorkshop\\VotingWorkshop\\wwwroot\\images\\candidate6.png",
-      "PackagePath": "staticwebassets\\images\\candidate6.png"
+      "Id": "D:\\Desktop\\uni\\VotingWorkshop\\VotingWorkshop\\wwwroot\\images\\greenParty.jpg",
+      "PackagePath": "staticwebassets\\images\\greenParty.jpg"
     },
     {
       "Id": "D:\\Desktop\\uni\\VotingWorkshop\\VotingWorkshop\\wwwroot\\images\\redParty.jpg",
       "PackagePath": "staticwebassets\\images\\redParty.jpg"
-    },
-    {
-      "Id": "D:\\Desktop\\uni\\VotingWorkshop\\VotingWorkshop\\wwwroot\\js\\initFirebase.js",
-      "PackagePath": "staticwebassets\\js\\initFirebase.js"
     },
     {
       "Id": "D:\\Desktop\\uni\\VotingWorkshop\\VotingWorkshop\\wwwroot\\js\\site.js",
