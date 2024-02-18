@@ -3,6 +3,9 @@ using Microsoft.EntityFrameworkCore;
 using VotingWorkshop.Data;
 using FirebaseAdmin;
 using Google.Apis.Auth.OAuth2;
+using Microsoft.Extensions.Logging;
+using VotingWorkshop;
+using Google.Cloud.Firestore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,19 +19,23 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.Requ
     .AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddControllersWithViews();
 
-// Initialize Firebase
+System.Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", "votingfirestore-firebase-adminsdk-4v0w1-e3173c3afe.json");
+
+// Initialize Firebase Admin SDK
 try
 {
-    FirebaseApp.Create(new AppOptions
-    {
-        Credential = GoogleCredential.FromFile("voting - workshop - fc2cc - firebase - adminsdk - q7o57 - 87b90ffd00.json")
-    });
-}
-catch
-{
-    Console.WriteLine("Error creating firebase");
-}
+   
 
+FirebaseApp.Create("votingfirestore");
+}
+catch (Exception ex)
+{
+    // Log the exception
+    var logger = builder.Services.BuildServiceProvider().GetRequiredService<ILogger<Program>>();
+    logger.LogError(ex, "Error occurred while initializing Firebase Admin SDK.");
+    // Handle the exception as needed, e.g., display an error page or rethrow
+    throw;
+}
 
 
 var app = builder.Build();

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "LolrESfCqM4UCgUFsldpA4eqmQiMNI2J37MKa/p0Cf8=",
+  "Hash": "JxTLGP/I8/zG0y2h3hUa8xFfcqBWJPE6vrAC8TKTni4=",
   "Source": "VotingWorkshop",
   "BasePath": "_content/VotingWorkshop",
   "Mode": "Default",
@@ -1214,6 +1214,25 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
+      "Identity": "D:\\Desktop\\uni\\VotingWorkshop\\VotingWorkshop\\wwwroot\\css\\styles.css",
+      "SourceId": "VotingWorkshop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Desktop\\uni\\VotingWorkshop\\VotingWorkshop\\wwwroot\\",
+      "BasePath": "_content/VotingWorkshop",
+      "RelativePath": "css/styles.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\styles.css"
+    },
+    {
       "Identity": "D:\\Desktop\\uni\\VotingWorkshop\\VotingWorkshop\\wwwroot\\favicon.ico",
       "SourceId": "VotingWorkshop",
       "SourceType": "Discovered",
@@ -1269,6 +1288,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\background.jpg"
+    },
+    {
+      "Identity": "D:\\Desktop\\uni\\VotingWorkshop\\VotingWorkshop\\wwwroot\\images\\blueParty.jpg",
+      "SourceId": "VotingWorkshop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Desktop\\uni\\VotingWorkshop\\VotingWorkshop\\wwwroot\\",
+      "BasePath": "_content/VotingWorkshop",
+      "RelativePath": "images/blueParty.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\blueParty.jpg"
     },
     {
       "Identity": "D:\\Desktop\\uni\\VotingWorkshop\\VotingWorkshop\\wwwroot\\images\\candidate1.png",
@@ -1328,12 +1366,12 @@
       "OriginalItemSpec": "wwwroot\\images\\candidate3.png"
     },
     {
-      "Identity": "D:\\Desktop\\uni\\VotingWorkshop\\VotingWorkshop\\wwwroot\\images\\candidate4.png",
+      "Identity": "D:\\Desktop\\uni\\VotingWorkshop\\VotingWorkshop\\wwwroot\\images\\greenParty.jpg",
       "SourceId": "VotingWorkshop",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Desktop\\uni\\VotingWorkshop\\VotingWorkshop\\wwwroot\\",
       "BasePath": "_content/VotingWorkshop",
-      "RelativePath": "images/candidate4.png",
+      "RelativePath": "images/greenParty.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1344,15 +1382,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\candidate4.png"
+      "OriginalItemSpec": "wwwroot\\images\\greenParty.jpg"
     },
     {
-      "Identity": "D:\\Desktop\\uni\\VotingWorkshop\\VotingWorkshop\\wwwroot\\images\\candidate5.png",
+      "Identity": "D:\\Desktop\\uni\\VotingWorkshop\\VotingWorkshop\\wwwroot\\images\\redParty.jpg",
       "SourceId": "VotingWorkshop",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Desktop\\uni\\VotingWorkshop\\VotingWorkshop\\wwwroot\\",
       "BasePath": "_content/VotingWorkshop",
-      "RelativePath": "images/candidate5.png",
+      "RelativePath": "images/redParty.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1363,26 +1401,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\candidate5.png"
-    },
-    {
-      "Identity": "D:\\Desktop\\uni\\VotingWorkshop\\VotingWorkshop\\wwwroot\\images\\candidate6.png",
-      "SourceId": "VotingWorkshop",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\Desktop\\uni\\VotingWorkshop\\VotingWorkshop\\wwwroot\\",
-      "BasePath": "_content/VotingWorkshop",
-      "RelativePath": "images/candidate6.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\candidate6.png"
+      "OriginalItemSpec": "wwwroot\\images\\redParty.jpg"
     },
     {
       "Identity": "D:\\Desktop\\uni\\VotingWorkshop\\VotingWorkshop\\wwwroot\\js\\site.js",

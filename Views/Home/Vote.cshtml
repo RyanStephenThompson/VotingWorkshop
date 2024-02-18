@@ -1,0 +1,57 @@
+﻿@page
+@model VotingWorkshop.Views.Home.VoteModel
+@{
+    
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    .card-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        margin: 100px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-img {
+        width: 200px;
+        height: auto;
+    }</style>
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>Vote</title>    
+</head>
+<body>
+<h1 style="text-align:center">Cast Your Vote</h1>
+
+<div class="card-container">
+    <div class="card">
+        <img src="~/images/blueParty.jpg" alt="Blue Party" class="card-img">
+            <h2>Blue Party</h2>
+    </div>
+    <div class="card">
+            <img src="~/images/redParty.jpg" alt="Red Party" class="card-img">
+            <h2>Red Party</h2>
+    </div>
+    <div class="card">
+            <img src="~/images/greenParty.jpg" alt="Green Party" class="card-img">
+            <h2>Green Party</h2>
+    </div>
+</div>
+</body>
+

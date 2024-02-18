@@ -9,10 +9,9 @@
     <title>Voting Website</title>
 </head>
 
-
-
 <body>
 
+    
     <div class="image-banner"></div>
 
     <div class="slogan">
@@ -21,76 +20,69 @@
     </div>
 
     <div class="container">
-
+        <!-- START OF GRID -->
         <div class="candidates-grid">
-            <div class="candidate-card">
-                <div class="candidate">
-                    <img src="~/images/candidate1.png" alt="Candidate 1">
-                    <h2>Candidate 1</h2>
-                    <p>Description of Candidate 1.</p>
-                </div>
-            </div>
 
-            <div class="candidate-card">
+            <a class="card-link" asp-area="" asp-controller="Home" asp-action="Candidates" asp-route-id="y88LHmZbYFXk8RcalYBf">
+                <div class="candidate-card" onclick="showSpinner(this)">
+                    <div class="candidate">
+                        <img src="~/images/candidate1.png" alt="Candidate 1">
+                        <h2>Ryan Johnson</h2>
+                        <p><b> Blue Party</b></p>
+                        <div class="card-spinner">
+                            <div class="spinner"></div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a class=card-link asp-area="" asp-controller="Home" asp-action="Candidates" asp-route-id="Z9rsAAlBJ5tMAhPD5092">
+                <div class="candidate-card" onclick="showSpinner(this) onmouseenter="background-color:grey">                    
                 <div class="candidate">
                     <img src="~/images/candidate2.png" alt="Candidate 2">
-                    <h2>Candidate 2</h2>
-                    <p>Description of Candidate 2.</p>
-                </div>
+                        <h2>Malik Washington</h2>
+                        <p><b>Red Party</b></p>
+                        <div class="card-spinner">
+                            <div class="spinner"></div>
+                        </div>
+                </div>                    
             </div>
+            </a>
 
-            <div class="candidate-card">
+            <a class=card-link asp-area="" asp-controller="Home" asp-action="Candidates" asp-route-id="Nw5gqgzXQw0ZSuUhNmVt">
+                <div class="candidate-card" onclick="showSpinner(this)">
                 <div class="candidate">
                     <img src="~/images/candidate3.png" alt="Candidate 3">
-                    <h2>Candidate 3</h2>
-                    <p>Description of Candidate 3.</p>
+                        <h2>Emily Anderson</h2>
+                        <p><b>Green Party</b></p>
+                        <div class="card-spinner">
+                            <div class="spinner"></div>
+                        </div>
+                    
                 </div>
             </div>
-
-            <div class="candidate-card">
-                <div class="candidate">
-                    <img src="~/images/candidate4.png" alt="Candidate 4">
-                    <h2>Candidate 4</h2>
-                    <p>Description of Candidate 4.</p>
-                </div>
-            </div>
-
-            <div class="candidate-card">
-                <div class="candidate">
-                    <img src="~/images/candidate5.png" alt="Candidate 5">
-                    <h2>Candidate 5</h2>
-                    <p>Description of Candidate 5.</p>
-                </div>
-            </div>
-
-            <div class="candidate-card">
-                <div class="candidate">
-                    <img src="~/images/candidate6.png" alt="Candidate 6">
-                    <h2>Candidate 6</h2>
-                    <p>Description of Candidate 6.</p>
-                </div>
-            </div>
-
-            <!-- Repeat the above div structure for each candidate -->
+            </a>
         </div>
+        <!-- END OF GRID -->
+
+        <div class="">
+            <a type="button" class="btn btn-primary btn-lg" asp-controller="Home" asp-action="Vote">Cast Your Vote</a>
+        </div>
+
     </div>
+
+
 
     <div class="graph">
         <div class="container">
             <h2>Results</h2>
             <div class="graph-bars">
-                <div class="graph-bar-name">Candidate 1 (30%)</div>
+                <div class="graph-bar-name">Blue (30%)</div>
                 <div class="graph-bar" style="width: 30%;"></div>
-                <div class="graph-bar-name">Candidate 2 (20%)</div>
+                <div class="graph-bar-name">Red (20%)</div>
                 <div class="graph-bar" style="width: 20%;"></div>
-                <div class="graph-bar-name">Candidate 3 (15%)</div>
+                <div class="graph-bar-name">Green (15%)</div>
                 <div class="graph-bar" style="width: 15%;"></div>
-                <div class="graph-bar-name">Candidate 4 (10%)</div>
-                <div class="graph-bar" style="width: 10%;"></div>
-                <div class="graph-bar-name">Candidate 5 (5%)</div>
-                <div class="graph-bar" style="width: 5%;"></div>
-                <div class="graph-bar-name">Candidate 6 (20%)</div>
-                <div class="graph-bar" style="width: 20%;"></div>
             </div>
         </div>
     </div>
@@ -104,10 +96,7 @@
         const candidates = [
             { name: "Candidate 1", votes: 30 },
             { name: "Candidate 2", votes: 20 },
-            { name: "Candidate 3", votes: 15 },
-            { name: "Candidate 4", votes: 10 },
-            { name: "Candidate 5", votes: 5 },
-            { name: "Candidate 6", votes: 20 }
+            { name: "Candidate 3", votes: 15 }
         ];
 
         // Calculate percentage for each candidate and update HTML
@@ -120,7 +109,15 @@
         });
     </script>
 
+    <script>
+        function showSpinner(card) {
+            var spinnerOverlay = card.querySelector('.card-spinner');
+            spinnerOverlay.style.display = 'block';
 
+            // Optionally, you can also redirect to the Candidates page after showing the spinner
+            // window.location.href = card.getAttribute('href');
+        }
+    </script>
 
 </body>
 

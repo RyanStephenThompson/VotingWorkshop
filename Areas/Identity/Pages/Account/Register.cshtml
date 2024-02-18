@@ -1,0 +1,92 @@
+﻿@page
+@model VotingWorkshop.Areas.Identity.Pages.Account.RegisterModel
+@{
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register - VotingWorkshop</title>
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/site.css?v=x1iRg3ioaL7SicAQFywFn0BldhwnOgEAsSA6nOtqyOQ" />
+    <link rel="stylesheet" href="/VotingWorkshop.styles.css?v=VMiQOxIANJ6Ear5CUn02tNhrVLaCp_xdLJezGX0GvVY" />
+
+
+</head>
+
+<body>
+
+    <main b-sc5y2be21q>
+        <div b-sc5y2be21q>
+            <main b-sc5y2be21q role="main" class="pb-3">
+
+                
+
+                <div class="row"
+                     style="
+                        justify-content: center; /* Center horizontally * /
+                        align-items: center; /* Center vertically * /
+                        margin-left: 20px
+                        text-align: center"
+                     >
+
+                    <div class="col-md-4">
+
+                        <h1>Register</h1>
+
+                        <form id="registerForm" method="post" action="/Identity/Account/Register">
+                            <h2>Create a new account.</h2>
+                            <hr />
+
+                            <div class="form-floating mb-3">
+                                <input class="form-control" autocomplete="username" aria-required="true" placeholder="name@example.com" type="email" data-val="true" data-val-email="The Email field is not a valid e-mail address." data-val-required="The Email field is required." id="Input_Email" name="Input.Email" value="" />
+                                <label for="Input_Email">Email</label>
+                                <span class="text-danger field-validation-valid" data-valmsg-for="Input.Email" data-valmsg-replace="true"></span>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input class="form-control" autocomplete="new-password" aria-required="true" placeholder="password" type="password" data-val="true" data-val-length="The Password must be at least 6 and at max 100 characters long." data-val-length-max="100" data-val-length-min="6" data-val-required="The Password field is required." id="Input_Password" maxlength="100" name="Input.Password" />
+                                <label for="Input_Password">Password</label>
+                                <span class="text-danger field-validation-valid" data-valmsg-for="Input.Password" data-valmsg-replace="true"></span>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input class="form-control" autocomplete="new-password" aria-required="true" placeholder="password" type="password" data-val="true" data-val-equalto="The password and confirmation password do not match." data-val-equalto-other="*.Password" id="Input_ConfirmPassword" name="Input.ConfirmPassword" />
+                                <label for="Input_ConfirmPassword">Confirm Password</label>
+                                <span class="text-danger field-validation-valid" data-valmsg-for="Input.ConfirmPassword" data-valmsg-replace="true"></span>
+                            </div>
+                            <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-primary">Register</button>
+                            <input name="__RequestVerificationToken" type="hidden" value="CfDJ8CR457ITSVtGpGz8WLc7ALxtnP-QnweL8-CzdSxszb0NJBiDhBxC3MkrXXkgf1LHwALvZG-XLLg4OqfmANH4ci6O7OgrGEvixUq92uhRMMI9fqvYg5031TeODag9HJYdcZmNKDSyRWouZoQXG0vOFgU" />
+                        </form>
+                    </div>
+                </div>
+
+
+            </main>
+        </div>
+
+        <footer b-sc5y2be21q class="border-top footer text-muted">
+            <div b-sc5y2be21q>
+                &copy; 2024 - VotingWorkshop - <a href="/Home/Privacy">Privacy </a>
+            </div>
+        </footer>
+        <script src="/lib/jquery/dist/jquery.min.js"></script>
+        <script src="/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="/js/site.js?v=yThW5Mz4FHS97Rj0tkvNRYBwMebqcBhKXrkHTb-g6og"></script>
+
+
+        <script src="/Identity/lib/jquery-validation/dist/jquery.validate.js"></script>
+        <script src="/Identity/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+
+
+
+
+    </main>
+
+    <!-- Visual Studio Browser Link -->
+    <script type="text/javascript" src="/_vs/browserLink" async="async" id="__browserLink_initializationData" data-requestId="a1f0cd7aeae142548f09aa4f34ca4e9e" data-requestMappingFromServer="false" data-connectUrl="http://localhost:58429/60cce69e738b406a8a3e98c9de278ff1/browserLink"></script>
+    <!-- End Browser Link -->
+    <script src="/_framework/aspnetcore-browser-refresh.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model VotingWorkshop.Models.Candidate
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <title>Candidate Banner</title>
+    <link rel="stylesheet" href="~/css/styles.css">
+</head>
+<body>
+
+
+
+
+    <div class="candidate-banner">
+        <div class="candidate-image">
+            <img src="~/images/@Model.Image" alt="Candidate Image">
+        </div>
+        <div class="candidate-details">
+            <h1>@Model.Name</h1>
+            @if (Model != null)
+            {
+                <!-- get the desc from firebase and display it -->
+                <p>@Model.Description</p>
+            }
+             
+            @if (Model.Party == "Blue")
+            {
+                <img class="party-logo" src="~/images/blueParty.jpg" alt="Party Logo">
+            }
+            else if (Model.Party == "Red")
+            {
+                <img class="party-logo" src="~/images/redParty.jpg" alt="Party Logo">
+            }
+            else if (Model.Party == "Green")
+            {
+                <img class="party-logo" src="~/images/greenParty.jpg" alt="Party Logo">
+            }
+        </div>
+    </div>
+
+</body>
+
+
+
+</html>
+

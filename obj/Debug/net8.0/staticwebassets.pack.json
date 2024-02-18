@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
+      "Id": "D:\\Desktop\\uni\\VotingWorkshop\\VotingWorkshop\\wwwroot\\css\\styles.css",
+      "PackagePath": "staticwebassets\\css\\styles.css"
+    },
+    {
       "Id": "D:\\Desktop\\uni\\VotingWorkshop\\VotingWorkshop\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
@@ -19,6 +23,10 @@
     {
       "Id": "D:\\Desktop\\uni\\VotingWorkshop\\VotingWorkshop\\wwwroot\\images\\background.jpg",
       "PackagePath": "staticwebassets\\images\\background.jpg"
+    },
+    {
+      "Id": "D:\\Desktop\\uni\\VotingWorkshop\\VotingWorkshop\\wwwroot\\images\\blueParty.jpg",
+      "PackagePath": "staticwebassets\\images\\blueParty.jpg"
     },
     {
       "Id": "D:\\Desktop\\uni\\VotingWorkshop\\VotingWorkshop\\wwwroot\\images\\candidate1.png",
@@ -33,16 +41,12 @@
       "PackagePath": "staticwebassets\\images\\candidate3.png"
     },
     {
-      "Id": "D:\\Desktop\\uni\\VotingWorkshop\\VotingWorkshop\\wwwroot\\images\\candidate4.png",
-      "PackagePath": "staticwebassets\\images\\candidate4.png"
+      "Id": "D:\\Desktop\\uni\\VotingWorkshop\\VotingWorkshop\\wwwroot\\images\\greenParty.jpg",
+      "PackagePath": "staticwebassets\\images\\greenParty.jpg"
     },
     {
-      "Id": "D:\\Desktop\\uni\\VotingWorkshop\\VotingWorkshop\\wwwroot\\images\\candidate5.png",
-      "PackagePath": "staticwebassets\\images\\candidate5.png"
-    },
-    {
-      "Id": "D:\\Desktop\\uni\\VotingWorkshop\\VotingWorkshop\\wwwroot\\images\\candidate6.png",
-      "PackagePath": "staticwebassets\\images\\candidate6.png"
+      "Id": "D:\\Desktop\\uni\\VotingWorkshop\\VotingWorkshop\\wwwroot\\images\\redParty.jpg",
+      "PackagePath": "staticwebassets\\images\\redParty.jpg"
     },
     {
       "Id": "D:\\Desktop\\uni\\VotingWorkshop\\VotingWorkshop\\wwwroot\\js\\site.js",
