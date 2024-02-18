@@ -42,5 +42,12 @@ namespace VotingWorkshop.Data
 
             return documentSnapshot;
         }
+
+        public async void incVotes(String party)
+        {                        
+            DocumentReference docRef = db.Collection(collection).Document("bKtITbJlO5TmlbPTnlok");
+            await docRef.UpdateAsync(party, FieldValue.Increment(1));
+            await docRef.UpdateAsync("Total", FieldValue.Increment(1));
+        }
     }
 }

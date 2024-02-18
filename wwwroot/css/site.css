@@ -2,6 +2,7 @@ html {
     font-size: 14px;
     position: relative;
     min-height: 100%;
+    
 }
 
 @media (min-width: 768px) {
@@ -65,7 +66,7 @@ html {
 .footer {
     background-color: white; /* Change to your desired color */
     color: #fff;
-    margin-top: 15px;
+    margin-top: auto;
     text-align: center;
 }
 
@@ -79,11 +80,10 @@ html {
 }
 
 body {
-    
     justify-content: center;
     align-items: center;
     margin-bottom: 75px;
-
+    height: 100%;
 }
 
 .container {
@@ -94,6 +94,10 @@ body {
     padding: 15px;
     text-align: center;
     margin: 0 auto;
+
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .candidates-grid {
@@ -119,6 +123,7 @@ body {
     .candidate-card:hover {
         background-color: white;
     }
+
 .candidate {
     text-align: center;
     
@@ -162,19 +167,29 @@ body {
 
 
 .graph {
-    margin-top: 40px;
+    width: 400px;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    
+    
 }
 
 .graph-bars {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    grid-gap: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .graph-bar {
     background-color: #007bff;
-    height: 1vw; /* Adjust the height as needed */
+    color: #fff;
+    padding: 5px;
     border-radius: 5px;
+    transition: width 0.5s ease;
+}
+
+.graph-bar-name {
+    margin-bottom: 5px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -223,4 +238,5 @@ body {
         transform: rotate(360deg);
     }
 }
+
 

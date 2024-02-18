@@ -1,10 +1,8 @@
 ﻿using Google.Cloud.Firestore;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using VotingWorkshop.Services;
 using VotingWorkshop.Data;
 using VotingWorkshop.Models;
-using System.IO;
+
 
 namespace VotingWorkshop.Controllers
 {
@@ -14,9 +12,6 @@ namespace VotingWorkshop.Controllers
 
         FirestoreDB db;
     
-
-
-
         public CandidateController()
         {
             db = new FirestoreDB("candidates");           
