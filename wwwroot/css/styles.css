@@ -1,4 +1,6 @@
 ﻿/* styles.css */
+
+
 .candidate-banner {
     display: flex;
     align-items: center;
@@ -27,12 +29,12 @@
 }
 
     .candidate-details h1 {
-        font-size: 24px;
+        
         margin-bottom: 10px;
     }
 
     .candidate-details p {
-        font-size: 18px;
+        font-size: 22px;
         line-height: 1.6;
         margin-bottom: 20px;
     }

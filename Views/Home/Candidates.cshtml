@@ -29,7 +29,7 @@
             <img src="~/images/@Model.Image" alt="Candidate Image">
         </div>
         <div class="candidate-details">
-            <h1><p>@Model.Name</p></h1>
+            <h1>@Model.Name</h1>
             @if (Model != null)
             {
                 <!-- get the desc from firebase and display it -->
@@ -43,6 +43,10 @@
             else if (Model.Party == "Red")
             {
                 <img class="party-logo" src="~/images/redParty.jpg" alt="Party Logo">
+            }
+            else if (Model.Party == "Green")
+            {
+                <img class="party-logo" src="~/images/greenParty.jpg" alt="Party Logo">
             }
         </div>
     </div>
