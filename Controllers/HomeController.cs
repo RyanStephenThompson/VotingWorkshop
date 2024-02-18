@@ -8,15 +8,31 @@ namespace VotingWorkshop.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         Candidate candidate;
+        Votes votes;
 
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
         }
 
+        public async void calcVotes()
+        {
+            VotesController votesController = new VotesController();
+            votes = await votesController.getVotes();
+        }
+
         public IActionResult Index()
         {
-            return View();
+
+            calcVotes();
+
+            //force page to wait until data has been fetched
+            while (votes == null)
+            {
+                continue;
+            }
+
+            return View(votes);
         }
 
         public IActionResult Privacy()
@@ -28,7 +44,7 @@ namespace VotingWorkshop.Controllers
         {
 
             CandidateController candidateController = new CandidateController();
-            candidate = await candidateController.getCandidate(DocID);
+            candidate =  await candidateController.getCandidate(DocID);
 
         }
         public IActionResult Candidates(String id)
@@ -41,6 +57,18 @@ namespace VotingWorkshop.Controllers
             }
 
             return View(candidate);
+        }
+
+        public async void incVotes(String party)
+        {            
+            VotesController votesController = new VotesController();
+            votesController.AddVote(party);
+        }
+
+        public IActionResult ThankYou(String party)
+        {
+            incVotes(party);
+            return View();
         }
 
         public IActionResult Vote()

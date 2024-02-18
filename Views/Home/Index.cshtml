@@ -1,12 +1,13 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-
+@model VotingWorkshop.Models.Votes
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Voting Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -73,41 +74,65 @@
 
 
 
-    <div class="graph">
-        <div class="container">
-            <h2>Results</h2>
-            <div class="graph-bars">
-                <div class="graph-bar-name">Blue (30%)</div>
-                <div class="graph-bar" style="width: 30%;"></div>
-                <div class="graph-bar-name">Red (20%)</div>
-                <div class="graph-bar" style="width: 20%;"></div>
-                <div class="graph-bar-name">Green (15%)</div>
-                <div class="graph-bar" style="width: 15%;"></div>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col">
+                <h2 class="text-center">Results</h2>
+                <div class="graph-bars">
+                    <div class="row">
+                        <div class="col">
+                            <div class="graph-bar" data-candidate="Blue" style="width:0%;">
+                                <div class="graph-bar-name">Blue (0%)</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="graph-bar" data-candidate="Red" style="width:0%;">
+                                <div class="graph-bar-name">Red (0%)</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="graph-bar" data-candidate="Green" style="width:0%;">
+                                <div class="graph-bar-name">Green (0%)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
+    <!-- Bootstrap JS (optional) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
-        // Calculate total votes for all candidates
-        const totalVotes = 100; // Assuming total votes is 100 for this example
+        // Your JavaScript code here
+        // Get the total votes from the server-side
+        const totalVotes = @Model.Total; // Assuming total votes is 100 for this example
 
         // Array to store candidates and their votes
         const candidates = [
-            { name: "Candidate 1", votes: 30 },
-            { name: "Candidate 2", votes: 20 },
-            { name: "Candidate 3", votes: 15 }
+            { name: "Blue", votes: @Model.Blue },
+            { name: "Red", votes: @Model.Red },
+            { name: "Green", votes: @Model.Green }
         ];
 
         // Calculate percentage for each candidate and update HTML
         candidates.forEach(candidate => {
             const percentage = (candidate.votes / totalVotes) * 100;
-            const graphBarName = document.querySelector(`.graph-bar-name:contains("${candidate.name}")`);
-            if (graphBarName) {
+            const graphBar = document.querySelector(`.graph-bar[data-candidate="${candidate.name}"]`);
+            if (graphBar) {
+                const graphBarName = graphBar.querySelector('.graph-bar-name');
+                graphBar.style.width = `${percentage}%`;
+                graphBar.style.backgroundColor = candidate.name.toLowerCase();
                 graphBarName.textContent = `${candidate.name} (${percentage.toFixed(2)}%)`;
             }
         });
     </script>
+
 
     <script>
         function showSpinner(card) {

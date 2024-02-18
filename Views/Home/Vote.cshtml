@@ -1,9 +1,4 @@
-﻿@page
-@model VotingWorkshop.Views.Home.VoteModel
-@{
-    
-}
-
+﻿
 <!DOCTYPE html>
 <html lang="en">
 <style>
@@ -21,12 +16,23 @@
         border-radius: 5px;
         text-align: center;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        background-color: #F1F1F1;
     }
 
     .card-img {
         width: 200px;
         height: auto;
-    }</style>
+    }
+
+   .card:hover {
+        background-color: white;
+     }
+
+    .card-link {
+        text-decoration: none; /* Remove underline */
+    }
+
+</style>
 
 
 <head>
@@ -39,19 +45,29 @@
 <body>
 <h1 style="text-align:center">Cast Your Vote</h1>
 
+
 <div class="card-container">
-    <div class="card">
-        <img src="~/images/blueParty.jpg" alt="Blue Party" class="card-img">
+        <a class=card-link asp-area="" asp-controller="Home" asp-action="ThankYou" asp-route-party="Blue">
+        <div class="card">
+            <img src="~/images/blueParty.jpg" alt="Blue Party" class="card-img">
             <h2>Blue Party</h2>
-    </div>
-    <div class="card">
-            <img src="~/images/redParty.jpg" alt="Red Party" class="card-img">
-            <h2>Red Party</h2>
-    </div>
-    <div class="card">
+        </div>
+    </a>
+
+    <a class=card-link asp-area="" asp-controller="Home" asp-action="ThankYou" asp-route-party="Red">
+        <div class="card">
+                <img src="~/images/redParty.jpg" alt="Red Party" class="card-img">
+                <h2>Red Party</h2>
+        </div>
+    </a>
+
+        <a class=card-link asp-area="" asp-controller="Home" asp-action="ThankYou" asp-route-party="Green">
+        <div class="card">
             <img src="~/images/greenParty.jpg" alt="Green Party" class="card-img">
             <h2>Green Party</h2>
-    </div>
+        </div>
+    </a>
+
 </div>
 </body>
 
