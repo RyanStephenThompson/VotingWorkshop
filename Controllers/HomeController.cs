@@ -1,6 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using FirebaseAdmin.Auth;
+using Google.Cloud.Firestore.V1;
+using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using VotingWorkshop.Models;
+using FirebaseAdmin;
+using Microsoft.AspNetCore.Identity.UI.Services;
+using Firebase.Auth;
+using Microsoft.AspNetCore.Identity;
 
 namespace VotingWorkshop.Controllers
 {
@@ -74,6 +80,34 @@ namespace VotingWorkshop.Controllers
         public IActionResult Vote()
         {
             return View();
+        }
+
+
+        //Testing firestore auth registering a user
+        public IActionResult createVoter()
+        {
+            Voter voter = new Voter();
+
+            //voter.Email = FindControl("txtSearch") as TextBox; ;
+            voter.ID = "01";
+            voter.Name = "Ryan";
+            voter.Password = "PW123123";
+            voter.confirmPassword = "PW123123";
+
+            VoterController voterController = new VoterController();
+            voterController.Register(voter);
+
+
+            calcVotes();
+
+            //force page to wait until data has been fetched
+            while (votes == null)
+            {
+                continue;
+            }
+
+
+            return View("Index", votes);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
