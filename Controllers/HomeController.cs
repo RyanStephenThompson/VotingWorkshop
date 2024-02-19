@@ -92,7 +92,7 @@ namespace VotingWorkshop.Controllers
             voter.ID = "01";
             voter.Name = "Ryan";
             voter.Password = "PW123123";
-            voter.confirmPassword = "PW123123";
+            
 
             VoterController voterController = new VoterController();
             voterController.Register(voter);

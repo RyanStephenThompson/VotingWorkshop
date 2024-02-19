@@ -17,8 +17,7 @@ namespace VotingWorkshop.Models
         [FirestoreProperty]
         public String Password { get; set; }
 
-        [FirestoreProperty]
-        public String confirmPassword { get; set; }
+
     }
 
 }

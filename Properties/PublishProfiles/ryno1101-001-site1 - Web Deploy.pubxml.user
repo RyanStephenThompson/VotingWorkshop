@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA9ANdvnwpykGBptRjz6/9SwAAAAACAAAAAAAQZgAAAAEAACAAAADkZzHjmZy9MADNrvfwOecbemyqInH4Lakx5ZeOOYVJ0QAAAAAOgAAAAAIAACAAAAD8a2pIO8dMb7JlNtnj1YZ+cs9ZVJh/yPrbDIAKYC8XUSAAAAALx6joo7CbEgOCuZsBDJCUkbSaH/MBc1ZrvTx1b42cIUAAAACFuixK6A85Jha+Adpk2i+0LJU5suL5oAuuvbqFHINR+axAq3c88X6elLDfVe6U7EnmrwBYTBhQAGMyea6qDd4u</EncryptedPassword>
+    <History>True|2024-02-19T18:42:56.6775935Z;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnection">
+      <Value>Server=%28localdb%29\mssqllocaldb%3bDatabase=aspnet-VotingWorkshop-433d9842-bbc6-49d4-85b9-ecc7841316f9%3bTrusted_Connection=True%3bMultipleActiveResultSets=true</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+</Project>
