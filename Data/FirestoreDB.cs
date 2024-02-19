@@ -1,6 +1,5 @@
 ﻿using Google.Cloud.Firestore;
-using Microsoft.CodeAnalysis;
-using Microsoft.CodeAnalysis.CSharp.Syntax;
+using Google.Apis.Auth.OAuth2;
 
 namespace VotingWorkshop.Data
 {
@@ -22,11 +21,11 @@ namespace VotingWorkshop.Data
             this.collection = collection;
         }
 
-        public async void AddToDB(Object obj)
+        public async void AddToDB(String ID,Object obj)
         {
             try
             {
-                await db.Collection(collection).AddAsync(obj);
+                await db.Collection(collection).Document(ID).SetAsync(obj);
             }
             catch (Exception ex) { Console.WriteLine(ex.ToString()); }
         }

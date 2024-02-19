@@ -21,21 +21,7 @@ builder.Services.AddControllersWithViews();
 
 System.Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", "votingfirestore-firebase-adminsdk-4v0w1-e3173c3afe.json");
 
-// Initialize Firebase Admin SDK
-try
-{
-   
 
-FirebaseApp.Create("votingfirestore");
-}
-catch (Exception ex)
-{
-    // Log the exception
-    var logger = builder.Services.BuildServiceProvider().GetRequiredService<ILogger<Program>>();
-    logger.LogError(ex, "Error occurred while initializing Firebase Admin SDK.");
-    // Handle the exception as needed, e.g., display an error page or rethrow
-    throw;
-}
 
 
 var app = builder.Build();

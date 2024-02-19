@@ -18,11 +18,11 @@ namespace VotingWorkshop.Controllers
         }
 
 
-        public void AddCandidate(Candidate candidate)
+        public void AddCandidate(String ID,Candidate candidate)
         {
             try
             {
-                 db.AddToDB(candidate);
+                 db.AddToDB(ID,candidate);
             }
             catch (Exception ex){ Console.WriteLine(ex); }
         }
